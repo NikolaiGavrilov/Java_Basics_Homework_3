@@ -17,14 +17,11 @@ class Answer {
         removeEvenNumbers(userArray);
     }
     public static void removeEvenNumbers(Integer[] arr) {
-        ArrayList<Integer> arrayNew = new ArrayList<Integer>();
-        for(int i : arr) {
-            arrayNew.add(i);
-        }
+        ArrayList<Integer> arrayNew = new ArrayList<>(Arrays.asList(arr));
         System.out.println("Initial list");
         System.out.println(arrayNew);
         for (int i = 0; i < arrayNew.size(); i++) {
-            if (arrayNew.get(i)%2 == 0){
+            if (arrayNew.get( i)%2 == 0){
                 arrayNew.remove(arrayNew.get(i));
             }
         }
